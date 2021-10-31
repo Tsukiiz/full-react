@@ -1,10 +1,12 @@
+import './ExpenseItem.css';
+
 function ExpenseItem() {
   return (
-    <div>
-      <dic>Date</dic>
-      <div>
-        <div>Title</div>
-        <div>Amount</div>
+    <div className="expense-item">
+      <dic>March 28th 2021</dic>
+      <div className="expense-item__description">
+        <div>Car Insurance</div>
+        <div className="expense-item__price">Amount</div>
       </div>
     </div>
   );
