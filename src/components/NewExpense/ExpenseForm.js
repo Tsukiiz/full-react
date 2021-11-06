@@ -3,18 +3,36 @@ import "./ExpenseForm.css";
 
 const ExpenseForm = () => {
     // setting useState('') initialize as a string cus event.target.value is always return string.
-    const [enteredTitle, setEnteredTitle] = useState('');
-    const [enteredAmount, setEnteredAmount] = useState('');
-    const [enteredDate, setEnteredDate] = useState('');
+    // const [enteredTitle, setEnteredTitle] = useState('');
+    // const [enteredAmount, setEnteredAmount] = useState('');
+    // const [enteredDate, setEnteredDate] = useState('');
+
+    const [userInput, setUserInput] = useState({
+        enteredTitle: '',
+        enteredAmount: '',
+        enteredDate: '',
+    });
 
     const titleChangeHandler = (event) => {
-        setEnteredTitle(event.target.value);
+        // setEnteredTitle(event.target.value);
+        setUserInput({
+            ...userInput, //state operator use for copy whole userInput arrat and overwrite enteredTitle
+            enteredTitle: event.target.value,
+        });
     };
     const amountChangeHandler = (event) => {
-        setEnteredAmount(event.target.value);
+        // setEnteredAmount(event.target.value);
+        setUserInput({
+            ...userInput, //state operator use for copy whole userInput arrat and overwrite enteredTitle
+            enteredAmount: event.target.value,
+        });
     };
     const dateChangeHandler = (event) => {
-        setEnteredDate(event.target.value);
+        // setEnteredDate(event.target.value);
+        setUserInput({
+            ...userInput, //state operator use for copy whole userInput arrat and overwrite enteredTitle
+            enteredDate: event.target.value,
+        });
     };
 
 
